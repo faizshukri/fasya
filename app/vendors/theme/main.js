@@ -156,13 +156,13 @@ if( device.tablet() && device.mobile() ) {
     });
 
     // THE FANCYBOX PLUGIN INITALISATION
-    $(".fancybox").fancybox({
-         openEffect  : 'none',
-         closeEffect : 'none',
-         helpers : {
-                     media : {}
-                    }
-    });
+    // $(".fancybox").fancybox({
+    //      openEffect  : 'none',
+    //      closeEffect : 'none',
+    //      helpers : {
+    //                  media : {}
+    //                 }
+    // });
 
     // ADD/REMOVE the class "selected" from the gallery filters
     $('.filter-list li').click(function(){

@@ -75,6 +75,7 @@ h6 {
 }
 
 #ourstoryphoto img, 
+#ucapanphoto img,
 #thebridesidephoto img, 
 #thegroomsidephoto img, 
 #weddinglocationphoto img, 
@@ -490,6 +491,55 @@ h6 {
 		display: block;
 		margin-top: 7px;
 		line-height: 22px;
+	}
+
+
+
+/* "ucapan" section
+--------------------------------------------------------------------------------*/
+	#ucapan,
+	#galeri,
+	#lokasi,
+	#hubungi,
+	#kisahkami {
+		margin-bottom: 10em;
+	}
+
+	#ucapanphoto,
+	#galeriphoto,
+	#lokasiphoto,
+	#hubungiphoto,
+	#kisahkamiphoto {
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 300px;
+		height: 300px; 
+		margin: 0 auto; 
+		width: 100%; 
+		max-width: 1920px; 
+		margin-bottom: 50px;
+		
+	}
+
+	#ucapanphoto{
+		background-image:url(../img/parallax/ucapan.jpg);
+	}
+
+	#galeriphoto{
+		background-image:url(../img/parallax/brideside.jpg);
+	}
+
+	#kisahkamiphoto{
+		background-image:url(../img/parallax/kisahkami.jpg);
+	}
+
+	#lokasiphoto{
+		background-image:url(../img/parallax/langkawi.jpg);
+	}
+
+	#hubungiphoto{
+		background-image:url(../img/parallax/hubungi.jpg);
 	}
 
 /* "our love story" section
