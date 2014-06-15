@@ -45,8 +45,8 @@ angular
 
       $locationProvider.html5Mode(true);
   }])
-  .run(['$rootScope', function($rootScope){
+  .run(['$rootScope','$window', function($rootScope, $window){
     $rootScope.$on('$locationChangeStart', function(event, next, current){
-      window.scrollTo(0,0);
+      $window.scrollTo(0,0);
     });
   }]);

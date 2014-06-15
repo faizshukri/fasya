@@ -8,7 +8,7 @@
  * Controller of the fasyaApp
  */
 angular.module('fasyaApp')
-  .controller('NavCtrl', function ($scope, $location, $timeout) {
+  .controller('NavCtrl', ['$scope','$location','$timeout',function ($scope, $location, $timeout) {
 
     $scope.isActive = function(path){
         return $location.path() === path;
@@ -20,4 +20,4 @@ angular.module('fasyaApp')
             if(menu.find('nav').hasClass('in')) menu.find('nav').collapse('hide');
         });
     });
-  });
+  }]);
