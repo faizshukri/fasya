@@ -46,8 +46,9 @@ angular
 
       $locationProvider.html5Mode(true);
   }])
-  .run(['$rootScope','$window', function($rootScope, $window){
-    $rootScope.$on('$locationChangeStart', function(event, next, current){
+  .run(['$rootScope','$window', '$location', function($rootScope, $window, $location){
+    $rootScope.$on('$routeChangeSuccess', function(event, next, current){
       $window.scrollTo(0,0);
+      $window.ga('send', 'pageview', $location.path());
     });
   }]);
