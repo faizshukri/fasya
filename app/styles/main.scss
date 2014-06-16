@@ -41,6 +41,12 @@
             left: 50%;
         }
     }
+
+    @media (max-width: 768px){
+        .navbar-nav {
+            margin: 0px;
+        }
+    }
 }
 
 .view-wrapper {
