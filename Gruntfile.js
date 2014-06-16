@@ -377,7 +377,7 @@ module.exports = function (grunt) {
   grunt.registerTask("copyimg", function() {
     // read all subdirectories from your modules folder
     var yeoman = grunt.config.get('yeoman') || {};
-    grunt.file.expand( yeoman.app+"/vendors/**/{img,image,images,font,fonts}").forEach(function (dir) {
+    grunt.file.expand( yeoman.app+"/vendors/**/{img,image,images,font,fonts,assets}").forEach(function (dir) {
 
       // get the current concat config
       var copy = grunt.config.get('copy') || {};
