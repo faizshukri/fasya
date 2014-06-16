@@ -44,7 +44,7 @@ angular
         redirectTo: '/'
       });
 
-      // $locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true);
   }])
   .run(['$rootScope','$window', function($rootScope, $window){
     $rootScope.$on('$locationChangeStart', function(event, next, current){

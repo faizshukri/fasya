@@ -29,6 +29,10 @@ angular.module('fasyaApp')
             }
         });
 
+        jQuery(".gallery-container").delegate('.fancybox', 'click', function(e){
+            e.preventDefault();
+        });
+
         jQuery('#galeri .filter').click(function() {            
             api.megafilter(jQuery(this).data('category'));  
             $.waypoints('refresh');
