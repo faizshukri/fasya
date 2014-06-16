@@ -11,6 +11,7 @@
 angular
   .module('fasyaApp', [
     'ngRoute',
+    'angular-loading-bar',
     'ngAnimate'
   ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
