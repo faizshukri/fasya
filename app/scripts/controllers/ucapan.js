@@ -14,6 +14,11 @@ angular.module('fasyaApp')
 
     ucapanRef.on('value', function(snapshot){
         $scope.makeCollection();
+
+        angular.element('#slide-ucapan').on('slid.bs.carousel', function () {
+            window.scrollTo(0,400);
+        });
+        
         ucapanInit = true;
     });
 
@@ -54,5 +59,5 @@ angular.module('fasyaApp')
             $scope.ucapanCollection[ Math.floor ( i / limitPerPage ) ].push( $scope.ucapans.$child(val) );
         });
     }
-    
+
   }]);
