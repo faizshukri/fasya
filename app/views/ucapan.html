@@ -19,7 +19,7 @@
 
          <!-- "GUEST BOOK" ACTUAL CONTENT -->
         <div class="container">
-            <h3 class="text-center">Some Lovely People Had This To Say:</h3>
+            <h3 class="text-center">Ucapan-ucapan yang diterima.</h3>
 
 <!-- carousel -->
 
@@ -68,25 +68,25 @@
             <!-- SIGN OUR GUESTBOOK SECTION -->
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="text-left">Sign Our Guest Book!</h3>
-                    <p>Leave us a thought, a good wish or a congratulation and you’ll make us so happy. After the wedding we will organize all the good wishes into an album for everyone to read and enjoy!</p>
+                    <h3 class="text-left">Tulis nota pada buku tetamu!</h3>
+                    <p>Kami sangat berbesar hati andai anda dapat nyatakan apa yang anda fikir, ucapan tahniah, atau apa-apa mesej. :)</p>
                 </div>
                 <div class="col-md-6">
 
                     <!-- "GUEST BOOK" FORM -->
                     <form role="form" name="ucapanForm" >
                         <div class="form-group">
-                            <input ng-model="newPerson.name" required type="text" placeholder="Name..." id="guest-name" name="guest-name" class="form-control">
+                            <input ng-model="newPerson.name" required type="text" placeholder="Nama..." id="guest-name" name="guest-name" class="form-control">
                         </div>
 
                         <div class="form-group">
                             <input ng-model="newPerson.email" required type="email" placeholder="Email..." id="guest-email" name="guest-email" class="form-control">
                         </div>
                         <div class="form-group">
-                            <textarea ng-model="newPerson.message" required id="guest-message" name="guest-message" placeholder="Leave your message here..." rows="3" class="form-control"></textarea>
+                            <textarea ng-model="newPerson.message" required id="guest-message" name="guest-message" placeholder="Mesej anda di sini..." rows="3" class="form-control"></textarea>
                         </div>
                         <div class="form-group" id='gb_submit_m'>
-                            <input type="button" class="btn btn-primary" value="Send Message" ng-click="submit()" ng-disabled="ucapanForm.$invalid">
+                            <input type="button" class="btn btn-primary" value="Hantar Mesej" ng-click="submit()" ng-disabled="ucapanForm.$invalid">
                         </div>
                         <!-- SUCCESS/ERROR FIELDS -->
                         <div id='guestbook_success' class='alert alert-success'>Thank you. Your message has been sent.</div><!-- /. SUCCESS MESSAGE -->
