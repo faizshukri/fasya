@@ -23,7 +23,7 @@
 
 <!-- carousel -->
 
-<div id="slide-ucapan" class="carousel slide" data-ride="carousel">
+<div id="slide-ucapan" class="carousel slide" data-ride="carousel" ng-show="ucapanCollection" >
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li ng-repeat="ucapan in ucapanCollection" data-target="#slide-ucapan" data-slide-to="{{$index}}" ng-class="{active: $first}"></li>
