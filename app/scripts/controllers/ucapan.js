@@ -8,15 +8,8 @@
  * Controller of the fasyaApp
  */
 angular.module('fasyaApp')
-  .controller('UcapanCtrl', [ '$scope', '$firebase', function ($scope, $firebase) {
-    var ucapanRef = new Firebase("https://fasya.firebaseio.com/ucapan");
-    var ucapanInit = false;
-
-
-    $scope.ucapans = $firebase(ucapanRef);
-
-    $scope.newPerson = {};
-
+  .controller('UcapanCtrl', [ '$scope', '$firebase', '$timeout', function ($scope, $firebase, $timeout) {
+    
     $scope.addUcapan = function(){
         $scope.ucapans.$add($scope.newPerson);
         $scope.newPerson = {};
@@ -44,21 +37,35 @@ angular.module('fasyaApp')
         });
     }
 
-    ucapanRef.on('value', function(snapshot){
-        $scope.makeCollection();
 
-        angular.element('#slide-ucapan').on('slid.bs.carousel', function () {
-            if(ucapanInit) window.scrollTo(0,400);
+    $scope.init = function(){
+        console.log('init');
+        $scope.ucapanInit = false;
+        $scope.ucapanRef = new Firebase("https://fasya.firebaseio.com/ucapan");
+        $scope.ucapans = $firebase($scope.ucapanRef);
+        $scope.newPerson = {};
+
+        $scope.ucapanRef.on('value', function(snapshot){
+            $scope.makeCollection();
+
+            angular.element('#slide-ucapan').on('slid.bs.carousel', function () {
+                console.log('1');
+                if($scope.ucapanInit) window.scrollTo(0,400);
+            });
+
+            $timeout(function(){
+                $scope.ucapanInit = true;
+            });
         });
 
-        ucapanInit = true;
-    });
+        $scope.ucapanRef.on('child_added', function(child){
+            if($scope.ucapanInit){
+                angular.element('#slide-ucapan').carousel(0);
+                window.scrollTo(0,400);
+            }
+        });
+    }
 
-    ucapanRef.on('child_added', function(child){
-        if(ucapanInit){
-            angular.element('#slide-ucapan').carousel(0);
-            window.scrollTo(0,400);
-        }
-    });
+    $scope.init();
 
   }]);
