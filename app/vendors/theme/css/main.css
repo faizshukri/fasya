@@ -85,7 +85,7 @@ h6 {
 #gallery1photo img, 
 #gallery2photo img 
 #registryphoto img, 
-#guestbookphoto img {
+#ucapanphoto img {
 	position: absolute;
 	background-color: transparent;
 	border: none;
@@ -1683,11 +1683,11 @@ h6 {
 /* "GUEST BOOK" section
 --------------------------------------------------------------------------------*/
 
-	#guestbook {
+	#ucapan {
 		margin-bottom: 10em;
 		font-size: 15px;
 	}
-	#guestbook .sectionmaintitle {
+	#ucapan .sectionmaintitle {
 		font-size: 25px;
 		font-weight: bold;
 		font-family: 'Cinzel',serif;
@@ -1696,7 +1696,7 @@ h6 {
 	}
 
 	/* the header */
-	#guestbookphoto {
+/*	#ucapanphoto {
 		background:url(../img/parallax/guestbook.jpg);
 		background-attachment: fixed;
 		background-repeat: no-repeat;
@@ -1707,16 +1707,16 @@ h6 {
 		width: 100%; 
 		max-width: 1920px; 
 		margin-bottom: 50px;
-	}
+	}*/
 
 
-	#guestbook .border {
+	#ucapan .border {
 		width: 100%;
 		overflow: hidden;
 		padding: 15px;
 		margin-bottom: 3em;
 	}
-	#guestbook .border .row{
+	#ucapan .border .row{
 		border: 1px dashed #a8a8a8;
 		border-bottom: none;
 		border-right: none;
@@ -1724,10 +1724,10 @@ h6 {
 		background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3)
 		
 	}
-	#guestbook .border .row .col-md-1, #guestbook .border .row .col-md-2, #guestbook .border .row .col-md-3,
-	#guestbook .border .row .col-md-4, #guestbook .border .row .col-md-5, #guestbook .border .row .col-md-6,
-	#guestbook .border .row .col-md-7, #guestbook .border .row .col-md-8, #guestbook .border .row .col-md-9,
-	#guestbook .border .row .col-md-10, #guestbook .border .row .col-md-11, #guestbook .border .row .col-md-12 {
+	#ucapan .border .row .col-md-1, #ucapan .border .row .col-md-2, #ucapan .border .row .col-md-3,
+	#ucapan .border .row .col-md-4, #ucapan .border .row .col-md-5, #ucapan .border .row .col-md-6,
+	#ucapan .border .row .col-md-7, #ucapan .border .row .col-md-8, #ucapan .border .row .col-md-9,
+	#ucapan .border .row .col-md-10, #ucapan .border .row .col-md-11, #ucapan .border .row .col-md-12 {
 		border-right: 1px dashed #a8a8a8;
 		border-bottom: 1px dashed #a8a8a8;
 		-webkit-transition:all 0.2s ease-in;  
@@ -1736,70 +1736,70 @@ h6 {
 		transition:all 0.2s ease-in;
 		padding: 20px;
 	}
-	#guestbook .border .row .col-md-1 .date, #guestbook .border .row .col-md-2 .date, #guestbook .border .row .col-md-3 .date,
-	#guestbook .border .row .col-md-4 .date, #guestbook .border .row .col-md-5 .date, #guestbook .border .row .col-md-6 .date,
-	#guestbook .border .row .col-md-7 .date, #guestbook .border .row .col-md-8 .date, #guestbook .border .row .col-md-9 .date,
-	#guestbook .border .row .col-md-10 .date, #guestbook .border .row .col-md-11 .date, #guestbook .border .row .col-md-12 .date {
+	#ucapan .border .row .col-md-1 .date, #ucapan .border .row .col-md-2 .date, #ucapan .border .row .col-md-3 .date,
+	#ucapan .border .row .col-md-4 .date, #ucapan .border .row .col-md-5 .date, #ucapan .border .row .col-md-6 .date,
+	#ucapan .border .row .col-md-7 .date, #ucapan .border .row .col-md-8 .date, #ucapan .border .row .col-md-9 .date,
+	#ucapan .border .row .col-md-10 .date, #ucapan .border .row .col-md-11 .date, #ucapan .border .row .col-md-12 .date {
 		-webkit-transition:all 0.2s ease-in;  
 		-moz-transition:all 0.2s ease-in;  
 		-o-transition:all 0.2s ease-in;  
 		transition:all 0.2s ease-in;
 	}
-	#guestbook .border .row .col-md-1:hover, #guestbook .border .row .col-md-2:hover, #guestbook .border .row .col-md-3:hover,
-	#guestbook .border .row .col-md-4:hover, #guestbook .border .row .col-md-5:hover, #guestbook .border .row .col-md-6:hover,
-	#guestbook .border .row .col-md-7:hover, #guestbook .border .row .col-md-8:hover, #guestbook .border .row .col-md-9:hover,
-	#guestbook .border .row .col-md-10:hover, #guestbook .border .row .col-md-11:hover, #guestbook .border .row .col-md-12:hover {
+	#ucapan .border .row .col-md-1:hover, #ucapan .border .row .col-md-2:hover, #ucapan .border .row .col-md-3:hover,
+	#ucapan .border .row .col-md-4:hover, #ucapan .border .row .col-md-5:hover, #ucapan .border .row .col-md-6:hover,
+	#ucapan .border .row .col-md-7:hover, #ucapan .border .row .col-md-8:hover, #ucapan .border .row .col-md-9:hover,
+	#ucapan .border .row .col-md-10:hover, #ucapan .border .row .col-md-11:hover, #ucapan .border .row .col-md-12:hover {
 		background-color: rgba(255, 255, 255, 0.5);
 		background: rgba(255, 255, 255, 0.5);
 	}
-	#guestbook .border .row .col-md-1:hover .date, #guestbook .border .row .col-md-2:hover .date, #guestbook .border .row .col-md-3:hover .date,
-	#guestbook .border .row .col-md-4:hover .date, #guestbook .border .row .col-md-5:hover .date, #guestbook .border .row .col-md-6:hover .date,
-	#guestbook .border .row .col-md-7:hover .date, #guestbook .border .row .col-md-8:hover .date, #guestbook .border .row .col-md-9:hover .date,
-	#guestbook .border .row .col-md-10:hover .date, #guestbook .border .row .col-md-11:hover .date, #guestbook .border .row .col-md-12:hover .date {
+	#ucapan .border .row .col-md-1:hover .date, #ucapan .border .row .col-md-2:hover .date, #ucapan .border .row .col-md-3:hover .date,
+	#ucapan .border .row .col-md-4:hover .date, #ucapan .border .row .col-md-5:hover .date, #ucapan .border .row .col-md-6:hover .date,
+	#ucapan .border .row .col-md-7:hover .date, #ucapan .border .row .col-md-8:hover .date, #ucapan .border .row .col-md-9:hover .date,
+	#ucapan .border .row .col-md-10:hover .date, #ucapan .border .row .col-md-11:hover .date, #ucapan .border .row .col-md-12:hover .date {
 		padding-top: 20px;
 		padding-bottom: 10px;
 	}
 
-	#guestbook .col-md-1 > div, #guestbook .col-md-2 > div, #guestbook .col-md-3 > div,
-	#guestbook .col-md-4 > div, #guestbook .col-md-5 > div, #guestbook .col-md-6 > div,
-	#guestbook .col-md-7 > div, #guestbook .col-md-8 > div, #guestbook .col-md-9 > div,
-	#guestbook .col-md-10 > div, #guestbook .col-md-11 > div, #guestbook .col-md-12 > div {
+	#ucapan .col-md-1 > div, #ucapan .col-md-2 > div, #ucapan .col-md-3 > div,
+	#ucapan .col-md-4 > div, #ucapan .col-md-5 > div, #ucapan .col-md-6 > div,
+	#ucapan .col-md-7 > div, #ucapan .col-md-8 > div, #ucapan .col-md-9 > div,
+	#ucapan .col-md-10 > div, #ucapan .col-md-11 > div, #ucapan .col-md-12 > div {
 		height: 230px;
 		overflow: hidden;
 	}
 
 	
-	#guestbook .col-md-1 .row, #guestbook .col-md-2 .row, #guestbook .col-md-3 .row,
-	#guestbook .col-md-4 .row, #guestbook .col-md-5 .row, #guestbook .col-md-6 .row,
-	#guestbook .col-md-7 .row, #guestbook .col-md-8 .row, #guestbook .col-md-9 .row,
-	#guestbook .col-md-10 .row, #guestbook .col-md-11 .row, #guestbook .col-md-12 .row {
+	#ucapan .col-md-1 .row, #ucapan .col-md-2 .row, #ucapan .col-md-3 .row,
+	#ucapan .col-md-4 .row, #ucapan .col-md-5 .row, #ucapan .col-md-6 .row,
+	#ucapan .col-md-7 .row, #ucapan .col-md-8 .row, #ucapan .col-md-9 .row,
+	#ucapan .col-md-10 .row, #ucapan .col-md-11 .row, #ucapan .col-md-12 .row {
 		background-color: rgba(255, 255, 255, 0.3);
 		background: rgba(255, 255, 255, 0.3);
 	}
-	#guestbook .border img {
+	#ucapan .border img {
 		background-color: transparent;
 		border: none;
 		padding: 0px;
 		width: inherit;
 	}
-	#guestbook .border h5 {
+	#ucapan .border h5 {
 		width: 75%;
 		float: right;
 		font-size: 16px;
 		font-family: 'Cinzel',serif;
 	}
-	#guestbook .border h5 span {
+	#ucapan .border h5 span {
 		display: block;
 		margin-top: 5px;
 		font-family: 'Droid', arial;
 		font-size: 14px;
 		font-style: italic;
 	}
-	#guestbook .border p {
+	#ucapan .border p {
 		margin-top: 1em;
 	}
-	#guestbook .alert-success {display: none;}
-	#guestbook .alert-danger {display: none;}
+	#ucapan .alert-success {display: none;}
+	#ucapan .alert-danger {display: none;}
 
 /* "EVENTS CALENDAR / RSVP" section
 --------------------------------------------------------------------------------*/

@@ -12,7 +12,9 @@ angular
   .module('fasyaApp', [
     'ngRoute',
     'angular-loading-bar',
-    'ngAnimate'
+    'ngAnimate',
+    'ui.gravatar',
+    'firebase'
   ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider

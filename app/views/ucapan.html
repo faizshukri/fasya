@@ -16,4 +16,85 @@
             
         </div><!-- /#outstoryphoto -->
 
+
+         <!-- "GUEST BOOK" ACTUAL CONTENT -->
+        <div class="container">
+            <h3 class="text-center">Some Lovely People Had This To Say:</h3>
+
+<!-- carousel -->
+
+<div id="slide-ucapan" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li ng-repeat="ucapan in ucapanCollection" data-target="#slide-ucapan" data-slide-to="{{$index}}" ng-class="{active: $first}"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" id="ucapan-inner">
+    <div class="item" ng-repeat="groupucapan in ucapanCollection" ng-class="{active: $first}">
+
+            <div class="border">
+                <div class="row">
+                    
+                    <!-- "GUEST BOOK" COMMENT -->
+                    <div ng-repeat="ucapan in groupucapan" class="col-md-4">
+                        <div>
+                            <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65">
+                            <h5>{{ ucapan.name }}<span>{{ getFormattedDate(ucapan.created) }}</span></h5>
+                            <p>{{ ucapan.message }}</p>
+                        </div>
+                    </div><!-- /.col-md-4 -->
+
+                </div><!-- /.row -->
+            </div><!-- /.border -->
+
+
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#slide-ucapan" onclick="return false;" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#slide-ucapan" onclick="return false;" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+
+<!-- end carousel -->
+
+
+            <!-- SIGN OUR GUESTBOOK SECTION -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-left">Sign Our Guest Book!</h3>
+                    <p>Leave us a thought, a good wish or a congratulation and you’ll make us so happy. After the wedding we will organize all the good wishes into an album for everyone to read and enjoy!</p>
+                </div>
+                <div class="col-md-6">
+
+                    <!-- "GUEST BOOK" FORM -->
+                    <form role="form" name="ucapanForm" >
+                        <div class="form-group">
+                            <input ng-model="newPerson.name" required type="text" placeholder="Name..." id="guest-name" name="guest-name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input ng-model="newPerson.email" required type="email" placeholder="Email..." id="guest-email" name="guest-email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea ng-model="newPerson.message" required id="guest-message" name="guest-message" placeholder="Leave your message here..." rows="3" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group" id='gb_submit_m'>
+                            <input type="button" class="btn btn-primary" value="Send Message" ng-click="submit()" ng-disabled="ucapanForm.$invalid">
+                        </div>
+                        <!-- SUCCESS/ERROR FIELDS -->
+                        <div id='guestbook_success' class='alert alert-success'>Thank you. Your message has been sent.</div><!-- /. SUCCESS MESSAGE -->
+                        <div id='guestbook_fail' class='alert alert-danger'> Sorry, don't know what happened. Try later.</div><!-- /. ERROR MESSAGE -->
+                    </form><!-- /.signguestbook-->
+                </div><!-- /.col-md-6-->
+            </div><!-- /.row-->
+                        
+        </div><!-- /.container -->
+
 </section>
