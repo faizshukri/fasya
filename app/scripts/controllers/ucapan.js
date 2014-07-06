@@ -12,22 +12,6 @@ angular.module('fasyaApp')
     var ucapanRef = new Firebase("https://fasya.firebaseio.com/ucapan");
     var ucapanInit = false;
 
-    ucapanRef.on('value', function(snapshot){
-        $scope.makeCollection();
-
-        angular.element('#slide-ucapan').on('slid.bs.carousel', function () {
-            window.scrollTo(0,400);
-        });
-        
-        ucapanInit = true;
-    });
-
-    ucapanRef.on('child_added', function(child){
-        if(ucapanInit){
-            angular.element('#slide-ucapan').carousel(0);
-            window.scrollTo(0,400);
-        }
-    });
 
     $scope.ucapans = $firebase(ucapanRef);
 
@@ -59,5 +43,22 @@ angular.module('fasyaApp')
             $scope.ucapanCollection[ Math.floor ( i / limitPerPage ) ].push( $scope.ucapans.$child(val) );
         });
     }
+    
+    ucapanRef.on('value', function(snapshot){
+        $scope.makeCollection();
+
+        angular.element('#slide-ucapan').on('slid.bs.carousel', function () {
+            window.scrollTo(0,400);
+        });
+
+        ucapanInit = true;
+    });
+
+    ucapanRef.on('child_added', function(child){
+        if(ucapanInit){
+            angular.element('#slide-ucapan').carousel(0);
+            window.scrollTo(0,400);
+        }
+    });
 
   }]);
