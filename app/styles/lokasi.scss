@@ -1,0 +1,101 @@
+$primary-color: #f07677;
+
+#lokasi {
+    .nav-tabs.pengantin, .nav-tabs.origin {
+        li {
+            background: none;
+            padding-left: 0px;
+            width: 50%;
+            text-align: center;
+            font-size: 1.2em;
+            a {
+                background-color: white;
+                margin-right: 0px;
+                border-radius: 0px;
+            }
+
+            a:hover {
+                color: $primary-color;
+            }
+        }
+
+        li.active {
+            a {
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+    }
+
+    .nav-tabs.origin {
+        li {
+            font-size: 1em;
+        }
+    }
+
+    .tab-content {
+        .alignright {
+            margin: 20px 0;
+        }
+
+        .map-origin {
+            text-align: center;
+            background-color: white;
+        }
+
+        .coordinate-label {
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            border-radius: 0px;
+        }
+
+        .coordinate-value {
+            background-color: white;
+            border-radius: 0px;
+        }
+
+        .coordinate {
+            margin-top: -10px;
+            border-radius: 0;
+            padding: 0 3px;
+        }
+    }
+}
+
+.locationdetails h5{
+    margin-bottom: 10px;
+}
+
+// From Vendor
+.locationdetails {
+    margin:20px 0px;
+    padding: 0px;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+.locationdetails p {
+    margin-bottom: 0px;
+}
+.locationdetails li {
+    list-style-type: none;
+    width: 50%;
+    float: left;
+    padding-left: 0px;
+    background: none;
+}
+.locationdetails li:last-child {
+    float: right;
+    width: 40%
+}
+.locationdetails li span {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    margin-top: 8px;
+    width: 10px;
+}
+.locationdetails .alignleft {
+    margin: 0px;
+}

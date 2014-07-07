@@ -502,7 +502,7 @@ h6 {
 	#lokasi,
 	#hubungi,
 	#kisahkami {
-		margin-bottom: 10em;
+		margin-bottom: 3em;
 	}
 
 	#ucapanphoto,
@@ -1684,7 +1684,6 @@ h6 {
 --------------------------------------------------------------------------------*/
 
 	#ucapan {
-		margin-bottom: 10em;
 		font-size: 15px;
 	}
 	#ucapan .sectionmaintitle {
