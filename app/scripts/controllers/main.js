@@ -34,8 +34,6 @@ angular.module('fasyaApp')
 
     $scope.music.outputHandler = function(line, extra){
         jQuery('.sub_text span').text(line);
-        console.log(line);
-        console.log(extra);
     }
 
     $scope.init = function(){
