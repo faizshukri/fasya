@@ -15,7 +15,7 @@ angular.module('fasyaApp')
             e.preventDefault();
         });
 
-        angular.element('a[data-toggle="tab"]').on('shown.bs.tab', function(e){
+        angular.element('.origin a[data-toggle="tab"]').on('shown.bs.tab', function(e){
             var iframe = $( $(e.target).attr('href') ).find('iframe');
             var src = iframe.attr('src');
             var style = iframe.attr('style');
