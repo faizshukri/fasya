@@ -19,8 +19,8 @@ angular
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/front.html',
+        controller: 'FrontCtrl'
       })
       .when('/galeri', {
         templateUrl: 'views/galeri.html',

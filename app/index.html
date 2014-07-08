@@ -70,8 +70,15 @@
         </div><!-- /.container-->
     </header>
 
-    <div class="view-wrapper">
+    <div class="view-wrapper" ng-controller="MainCtrl">
       <div ng-view=""></div>
+      <audio id="music">
+        <source src="music/mp3/yaro.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+      <div class="sub_wrapper">
+        <div class="sub_text"><i class="glyphicon glyphicon-music"></i>&nbsp;<span>You Are The One - Raef</span></div>
+      </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -102,6 +109,7 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
+    <script src="vendors/lrc/lrc.js"></script>
     <script src="vendors/theme/js/bootstrap.min.js"></script>
     <script src="vendors/theme/js/device.min.js"></script>
     <script src="vendors/theme/js/waypoints.min.js"></script>
@@ -122,6 +130,7 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/front.js"></script>
     <script src="scripts/controllers/galeri.js"></script>
     <script src="scripts/controllers/kisah.js"></script>
     <script src="scripts/controllers/lokasi.js"></script>

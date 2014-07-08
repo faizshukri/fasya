@@ -4,3 +4,4 @@ dist
 .sass-cache
 bower_components
 app/images/gallery
+app/music/mp3/*.mp3

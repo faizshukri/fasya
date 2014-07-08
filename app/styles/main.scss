@@ -1,5 +1,6 @@
 // bower:scss
 // endbower
+$primary-color: #f07677;
 
 .browsehappy {
     margin: 0.2em 0;
@@ -53,6 +54,24 @@
     margin-top: 90px;
 }
 
+.sub_wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    z-index: 10000;
+}
+
+.sub_text {
+    position: relative;
+    left: -50%;
+    color: $primary-color;
+    text-shadow: 1px 1px #888;
+    font-size: 20px;
+    font-style: italic;
+    background-color: rgba(255,255,255,0.7);
+    -webkit-box-shadow: 0px 0px 10px 7px rgba(255,255,255,0.7);
+    box-shadow: 0px 0px 10px 7px rgba(255,255,255,0.7);
+}
 
 // Ucapan
 #ucapan {
@@ -62,6 +81,13 @@
     }
     .csspinner:before {
         background-color: transparent;
+    }
+
+    .csspinner.duo:after {
+        border-bottom: 4px solid $primary-color;
+        border-top: 4px solid $primary-color;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
     }
     #slide-ucapan {
 
@@ -75,7 +101,7 @@
             // right: -50%;
             width: 0px;
             font-size: 40px;
-            color: #f07677;
+            color: $primary-color;
 
             > span {
                 top: 260px;
@@ -98,8 +124,8 @@
             }
 
             > li.active {
-                background-color: #f07677;
-                border-color: #f07677;
+                background-color: $primary-color;
+                border-color: $primary-color;
             }
         }
     }

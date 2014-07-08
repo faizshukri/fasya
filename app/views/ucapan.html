@@ -21,50 +21,50 @@
         <div class="container">
             <h3 class="text-center">Ucapan-ucapan yang diterima.</h3>
 
-<!-- carousel -->
+            <!-- carousel -->
 
             <div class="csspinner duo" align="center" ng-hide="ucapanCollection"></div>
 
-<div id="slide-ucapan" class="carousel slide" data-ride="carousel" ng-show="ucapanCollection" >
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li ng-repeat="ucapan in ucapanCollection" data-target="#slide-ucapan" data-slide-to="{{$index}}" ng-class="{active: $first}"></li>
-  </ol>
+            <div id="slide-ucapan" class="carousel slide" data-ride="carousel" ng-show="ucapanCollection" >
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li ng-repeat="ucapan in ucapanCollection" data-target="#slide-ucapan" data-slide-to="{{$index}}" ng-class="{active: $first}"></li>
+              </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" id="ucapan-inner">
-    <div class="item" ng-repeat="groupucapan in ucapanCollection" ng-class="{active: $first}">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" id="ucapan-inner">
+                <div class="item" ng-repeat="groupucapan in ucapanCollection" ng-class="{active: $first}">
 
-            <div class="border">
-                <div class="row">
-                    
-                    <!-- "GUEST BOOK" COMMENT -->
-                    <div ng-repeat="ucapan in groupucapan" class="col-md-4">
-                        <div>
-                            <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65">
-                            <h5>{{ ucapan.name }}<span>{{ getFormattedDate(ucapan.created) }}</span></h5>
-                            <p>{{ ucapan.message }}</p>
-                        </div>
-                    </div><!-- /.col-md-4 -->
+                        <div class="border">
+                            <div class="row">
+                                
+                                <!-- "GUEST BOOK" COMMENT -->
+                                <div ng-repeat="ucapan in groupucapan" class="col-md-4">
+                                    <div>
+                                        <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65">
+                                        <h5>{{ ucapan.name }}<span>{{ getFormattedDate(ucapan.created) }}</span></h5>
+                                        <p>{{ ucapan.message }}</p>
+                                    </div>
+                                </div><!-- /.col-md-4 -->
 
-                </div><!-- /.row -->
-            </div><!-- /.border -->
-
-
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#slide-ucapan" onclick="return false;" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#slide-ucapan" onclick="return false;" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div>
+                            </div><!-- /.row -->
+                        </div><!-- /.border -->
 
 
-<!-- end carousel -->
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#slide-ucapan" onclick="return false;" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#slide-ucapan" onclick="return false;" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+
+
+            <!-- end carousel -->
 
 
             <!-- SIGN OUR GUESTBOOK SECTION -->
