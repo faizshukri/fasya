@@ -39,7 +39,6 @@ angular.module('fasyaApp')
 
 
     $scope.init = function(){
-        console.log('init');
         $scope.ucapanInit = false;
         $scope.ucapanRef = new Firebase("https://fasya.firebaseio.com/ucapan");
         $scope.ucapans = $firebase($scope.ucapanRef);

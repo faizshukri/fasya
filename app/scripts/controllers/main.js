@@ -16,18 +16,34 @@ angular.module('fasyaApp')
         $scope.music.loadMusic(function(){
             $timeout(function(){
                 angular.element('#music')[0].play();
+                $scope.music.played = true;
+
+                angular.element('.player_control').find('a').click(function(e){
+                    e.preventDefault();
+                    $scope.music.togglePause( $(this) );
+                }).html('<i class="glyphicon glyphicon-pause"></i>');
+
             }, 1000);
         });
     }
 
-    $scope.music.pause = function(){
-
+    $scope.music.togglePause = function(button){
+        if($scope.music.played){
+            angular.element('#music')[0].pause();
+            $scope.music.lyric.pauseToggle();
+            button.html('<i class="glyphicon glyphicon-play"></i>');
+        } else {
+            angular.element('#music')[0].play();
+            $scope.music.lyric.pauseToggle();
+            button.html('<i class="glyphicon glyphicon-pause"></i>');
+        }
+        $scope.music.played = !$scope.music.played;
     }
 
     $scope.music.loadMusic = function(callback){
         jQuery.ajax('music/lrc/yaro.lrc').done(function(value){
-            var lrc = new Lrc(value, $scope.music.outputHandler);
-            lrc.play();
+            $scope.music.lyric = new Lrc(value, $scope.music.outputHandler);
+            $scope.music.lyric.play();
             if(callback) callback();
         });
     }
