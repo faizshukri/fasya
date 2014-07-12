@@ -14,7 +14,8 @@ angular
     'angular-loading-bar',
     'ngAnimate',
     'ui.gravatar',
-    'firebase'
+    'firebase',
+    'mgcrea.ngStrap'
   ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
