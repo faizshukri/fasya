@@ -15,6 +15,11 @@ angular.module('fasyaApp')
             e.preventDefault();
         });
 
+        angular.element('.pengantin a[data-toggle="tab"]').on('shown.bs.tab', function(e){
+            var section = $( $(e.target).attr('href') );
+            section.find('.origin > li:first > a').click();
+        });
+
         angular.element('.origin a[data-toggle="tab"]').on('shown.bs.tab', function(e){
             var iframe = $( $(e.target).attr('href') ).find('iframe');
             var src = iframe.attr('src');
