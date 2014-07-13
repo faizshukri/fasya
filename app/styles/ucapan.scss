@@ -1,0 +1,64 @@
+
+$primary-color: #f07677;
+
+// Ucapan
+#ucapan {
+    .csspinner {
+        margin: 50px 0px 70px;
+        height: 20px;
+    }
+    .csspinner:before {
+        background-color: transparent;
+    }
+
+    .csspinner.duo:after {
+        border-bottom: 4px solid $primary-color;
+        border-top: 4px solid $primary-color;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+    }
+    #slide-ucapan {
+
+        @media (max-width: 991px){
+            .carousel-control {
+                display: none;
+            }
+        }
+        
+        .carousel-control {
+            // right: -50%;
+            width: 0px;
+            font-size: 40px;
+            color: $primary-color;
+            top: 25px;
+
+            > span {
+                top: 260px;
+                height: 50px;
+            }
+
+        }
+        .carousel-control.left {
+            left: -50px;
+            // left: -10px;
+            span {
+                margin-left: 0px;
+            }
+        }
+        .carousel-control.right {
+            right: -50px;
+            // right: -70px;
+        }
+
+        .carousel-indicators {
+            > li {
+                background-color: white;
+            }
+
+            > li.active {
+                background-color: $primary-color;
+                border-color: $primary-color;
+            }
+        }
+    }
+}
