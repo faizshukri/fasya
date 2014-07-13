@@ -66,7 +66,7 @@ angular.module('fasyaApp')
             var musictime = parseInt(this.currentTime.toFixed(3).split('.').join(''));
             var subtime = $scope.music.lyric.lines[ $scope.music.lyric_line ];
 
-            if(subtime && musictime >= subtime.time - 1000){
+            if(subtime && musictime >= subtime.time){
                 $scope.music.elem_sub.text(subtime.txt);
                 $scope.music.lyric_line++;
                 while( $scope.music.lyric_line < ( $scope.music.lyric.lines.length - 1) && $scope.music.lyric.lines[$scope.music.lyric_line + 1].time < musictime){
@@ -86,9 +86,12 @@ angular.module('fasyaApp')
 
         var modal = $modal({
             show: true,
-            title: 'Pemberitahuan',
-            content: "Website ini akan memainkan lagu/nasyid secara automatik beserta dengan lirik. "+
-                     "Anda boleh pause pada bila-bila masa dengan mengklik pada butang \"Pause\" di sebelah kiri anda",
+            title: 'Disclaimer',
+            content: "Website ini akan memainkan music secara automatik beserta dengan lirik. "+
+                     "Moga sama-sama dapat menghayati bait-bait lirik di dalam music ini secara interaktif :)<br /><br />"+
+                     "Walaubagaimanapun sekiranya anda merasakan music ini mengganggu, "+
+                     "anda boleh pause pada bila-bila masa dengan mengklik pada butang <strong>Pause</strong> di sebelah kiri anda :(",
+            html: true,
             backdrop: "static",
             keyboard: false,
             placement: 'center',
