@@ -2,12 +2,20 @@
 
 /**
  * @ngdoc function
- * @name fasyaApp.controller:MainCtrl
+ * @name fasyaApp.controller:FrontCtrl
  * @description
- * # MainCtrl
+ * # FrontCtrl
  * Controller of the fasyaApp
  */
 angular.module('fasyaApp')
   .controller('FrontCtrl', function ($scope) {
-    
+    $scope.init = function(){
+        // waypoint to the slider names
+        $('.navbar').waypoint(function(){
+            $('.names').removeClass('hide');
+            $('.names').addClass('animated fadeInUp');
+        }, { offset: 60 });
+    }
+
+    $scope.init();
   });
