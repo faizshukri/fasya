@@ -28,6 +28,15 @@ $primary-color: #f07677;
 
         .navbar-brand {
             margin-left: 0px !important;
+            position: relative;
+
+            .names {
+                font-family: 'Great Vibes',cursive;
+            }
+            span {
+                position: absolute;
+                top: 35px;
+            }
         }
 
         .navbar-wrapper {
