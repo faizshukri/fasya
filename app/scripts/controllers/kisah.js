@@ -8,6 +8,8 @@
  * Controller of the fasyaApp
  */
 angular.module('fasyaApp')
-  .controller('KisahCtrl', function ($scope) {
-
+  .controller('KisahCtrl', function ($scope, $timeout) {
+    $timeout(function(){
+        angular.element('.fancybox').fancybox();
+    });
   });
