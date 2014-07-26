@@ -50,6 +50,13 @@ $primary-color: #f07677;
             float: left; 
             left: 50%;
         }
+
+    }
+
+    @media (max-width: 1199px){
+        .collapse.in {
+            display: block !important;
+        }
     }
 
     @media (max-width: 768px){
@@ -97,4 +104,8 @@ $primary-color: #f07677;
 
 .modal-backdrop {
     background-color: rgba($primary-color, 0.5);
+}
+
+.errorMessage, #sendStatus{
+    color: $primary-color;
 }

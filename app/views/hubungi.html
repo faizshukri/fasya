@@ -16,4 +16,44 @@
             
         </div><!-- /#outstoryphoto -->
 
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                    <p>Adakah anda mempunyai apa-apa soalan dan mesej yang ingin disampaikan kepada kami? Gunakan ruang di bawah. Mesej anda akan kami terima terus di inbox mail, dan hanya akan dilihat oleh kami. Kami akan cuba memberi maklum balas dengan kadar segera.</p>
+                    <form name="hubungiForm" id="hubungiForm" novalidate>
+                        
+                        <!-- Tujuan -->
+                        <div class="form-group">
+                            <b>Tujuan</b><br />
+                            <label style="display: inline; font-weight: normal; margin-left: 10px;"><input style="display: inline; width: 25px; height: 20px; vertical-align: middle;" type="checkbox" class="form-control" id="kad_kenduri" name="kad_kenduri" ng-model="contact.kad_kenduri"> <small><i>Request kad kenduri (Masukkan alamat rumah di ruang mesej di bawah)</i></small></label><br />
+                            <label style="display: inline; font-weight: normal; margin-left: 10px;"><input style="display: inline; width: 25px; height: 20px; vertical-align: middle;" type="checkbox" class="form-control" id="soalan_cadangan" name="soalan" ng-model="contact.soalan"> <small><i>Soalan / Cadangan</i></small></label>
+                        </div><!-- /.form-group -->
+
+                        <!-- NAME -->
+                        <div class="form-group">
+                            <label for="contactname">Nama</label>
+                            <input required type="text" class="form-control" id="contactname" name="contactname" placeholder="Nama anda" ng-model="contact.name">
+                            <span class="errorMessage" style="font-style: italic;" ng-show="hubungiForm.contactname.$invalid && send">Sila masukkan nama anda.</span>
+                        </div><!-- /.form-group -->
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+                            <label for="contactemail">Alamat Email</label>
+                            <input required type="email" class="form-control" id="contactemail" name="contactemail" placeholder="Alamat email anda" ng-model="contact.email">
+                            <span class="errorMessage" style="font-style: italic;" ng-show="hubungiForm.contactemail.$invalid && send">Sila masukkan email anda.</span>
+                        </div><!-- /.form-group -->
+
+                        <!-- MESSAGE -->
+                        <div class="form-group">
+                            <label for="contactmessage">Mesej</label>
+                            <textarea required class="form-control" rows="3" placeholder="Masukkan mesej anda di sini" id="contactmessage" ng-model="contact.message" name="contactmessage"></textarea>
+                            <span class="errorMessage" style="font-style: italic;" ng-show="hubungiForm.contactmessage.$invalid && send">Sila masukkan mesej anda.</span>
+                        </div><!-- /.form-group -->
+
+                        <button id="sendMessage" class="btn btn-primary">Hantar Mesej</button><span style="padding-left: 20px; font-size: 20px; display: none;" id="sendStatus"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
 </section>
