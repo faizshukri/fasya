@@ -84,6 +84,42 @@
       <div class="player_control">
         <a href=""><i class="glyphicon glyphicon-play"></i></a>
       </div>
+
+      <div id="counter" style="width: 100%; height: 100%; position: fixed; z-index: 666999; top: 0px; left: 0px; background-color: rgb(255, 145, 146);">
+        <div id="timer" style="position: absolute; top: 5%; left: 0px; right: 0px;">
+            <div class="counterwrapper">
+                <div class="aligncenter">
+                    <div class="counter">
+                        <div class="daysleft">{{ wedding.months }}</div>
+                        <h5>Months</h5>
+                    </div>
+                    <div class="counter">
+                        <div class="daysleft">{{ wedding.days }}</div>
+                        <h5>Days</h5>
+                    </div>
+                    <div class="counter">
+                        <div class="daysleft">{{ wedding.hours }}</div>
+                        <h5>Hours</h5>
+                    </div>
+                </div>
+                <div class="remaining" style="margin-bottom: 0px;">Remaining...</div>
+            </div>
+            <div style="color: #f07677; background: white; padding: 10px 20px 20px; width: 100%; border-radius: 5%;">
+              <h2>Disclaimer</h2>
+                Website ini akan memainkan music secara automatik beserta dengan lirik. Moga sama-sama dapat menghayati bait-bait lirik di dalam music ini secara interaktif :)
+                <br /><br />
+                Walaubagaimanapun sekiranya anda merasakan music ini mengganggu, anda boleh pause pada bila-bila masa dengan mengklik pada butang <strong>Pause</strong> di sebelah kiri anda :(
+            </div>
+            <br />
+            <center><button ng-click="masuk()" class="btn btn-primary btn-lg" style="background-color: white; color: #f07677; font-size: 18px;" onmouseover="$(this).css({'background-color': '#FFCFCF', 'color': 'gray'})" onmouseout="$(this).css({'background-color': 'white', 'color':'#f07677'})">Masuk</button>
+            <br />
+            <small><i><span style="color: white;">akan masuk secara automatik selepas 7 saat</span></i></small>
+            </center>
+        </div>
+      </div>
+
+
+
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

@@ -10,6 +10,17 @@
 angular.module('fasyaApp')
   .controller('MainCtrl', function ($scope, $timeout, $modal) {
 
+    $scope.wedding_date = moment("Sep 13, 2014");
+
+    $scope.sudah_masuk = false;
+
+    $scope.wedding = {
+        date: moment("Sep 13, 2014"),
+        months: 0,
+        days: 0,
+        hours: 0
+    };
+
     $scope.music = {
         elem_button: angular.element('.player_control').find('a'),
         elem_mp3: angular.element('#music'),
@@ -85,7 +96,7 @@ angular.module('fasyaApp')
         });
 
         var modal = $modal({
-            show: true,
+            show: false,
             title: 'Disclaimer',
             content: "Website ini akan memainkan music secara automatik beserta dengan lirik. "+
                      "Moga sama-sama dapat menghayati bait-bait lirik di dalam music ini secara interaktif :)<br /><br />"+
@@ -103,6 +114,21 @@ angular.module('fasyaApp')
                 $scope.music.togglePlay();
             });
         });
+
+        $scope.wedding.months = Math.floor( $scope.wedding.date.diff( moment(), 'months', true) );
+        $scope.wedding.days = Math.floor( $scope.wedding.date.diff( moment().add($scope.wedding.months, 'month'), 'days', true) );
+        $scope.wedding.hours = Math.floor( $scope.wedding.date.diff( moment().add($scope.wedding.months, 'month').add($scope.wedding.days, 'day'), 'hours', true) );
+
+        $timeout(function(){
+            $scope.masuk();
+        }, 7000);
+
+    }
+
+    $scope.masuk = function(){
+        if($scope.sudah_masuk) return;
+        angular.element('#counter').fadeOut();
+        $scope.music.togglePlay();
     }
 
     $scope.init();
