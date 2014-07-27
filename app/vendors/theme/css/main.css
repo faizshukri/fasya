@@ -17,7 +17,7 @@ body {
 	line-height: 26px;
 	background: url(../img/body-bg.jpg) repeat;
 	text-shadow:0px 0px 1px #fff;
-	height: 100%!important;
+	/*height: 100%!important;*/
 }
 
 a {

@@ -68,6 +68,10 @@ $primary-color: #f07677;
 
 .view-wrapper {
     margin-top: 90px;
+
+    @media (max-width: 1200px){
+        margin-top: 98px;
+    }
 }
 
 .sub_wrapper {

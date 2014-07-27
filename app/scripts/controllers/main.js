@@ -10,12 +10,10 @@
 angular.module('fasyaApp')
   .controller('MainCtrl', function ($scope, $timeout, $modal) {
 
-    $scope.wedding_date = moment("Sep 13, 2014");
-
     $scope.sudah_masuk = false;
 
     $scope.wedding = {
-        date: moment("Sep 13, 2014"),
+        date: moment("2014-09-13"),
         months: 0,
         days: 0,
         hours: 0

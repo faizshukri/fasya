@@ -24,9 +24,23 @@
                         
                         <!-- Tujuan -->
                         <div class="form-group">
-                            <b>Tujuan</b><br />
-                            <label style="display: inline; font-weight: normal; margin-left: 10px;"><input style="display: inline; width: 25px; height: 20px; vertical-align: middle;" type="checkbox" class="form-control" id="kad_kenduri" name="kad_kenduri" ng-model="contact.kad_kenduri"> <small><i>Request kad kenduri (Masukkan alamat rumah di ruang mesej di bawah)</i></small></label><br />
-                            <label style="display: inline; font-weight: normal; margin-left: 10px;"><input style="display: inline; width: 25px; height: 20px; vertical-align: middle;" type="checkbox" class="form-control" id="soalan_cadangan" name="soalan" ng-model="contact.soalan"> <small><i>Soalan / Cadangan</i></small></label>
+                            <b>Tujuan</b><br /><br />
+                            <label style="font-weight: normal;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left: 20px; vertical-align: top;"><input style="display: inline; width: 25px; height: 20px; vertical-align: middle;" type="checkbox" class="form-control" id="kad_kenduri" name="kad_kenduri" ng-model="contact.kad_kenduri"></td>
+                                        <td style="vertical-align: top;"><span><small><i>Request kad kenduri. Masukkan alamat rumah di ruang mesej di bawah, dan nyatakan kad kenduri di sebelah siapa yang diingini.</i></small></span></td>
+                                    </tr>
+                                </table>
+                            </label>
+                            <label style="font-weight: normal;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left: 20px; vertical-align: top;"><input style="display: inline; width: 25px; height: 20px; vertical-align: middle;" type="checkbox" class="form-control" id="soalan_cadangan" name="soalan" ng-model="contact.soalan"></td>
+                                        <td style="vertical-align: top;"><small><i>Soalan / Cadangan</i></small></label></td>
+                                    </tr>
+                                </table>
+                             
                         </div><!-- /.form-group -->
 
                         <!-- NAME -->
