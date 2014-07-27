@@ -13,7 +13,7 @@ angular.module('fasyaApp')
     $scope.sudah_masuk = false;
 
     $scope.wedding = {
-        date: moment("2014-09-13"),
+        date: moment("2014-09-13 21:30:00"),
         months: 0,
         days: 0,
         hours: 0
