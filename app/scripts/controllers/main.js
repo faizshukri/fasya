@@ -129,6 +129,7 @@ angular.module('fasyaApp')
         if($scope.sudah_masuk) return;
         angular.element('#counter').fadeOut();
         $scope.music.togglePlay();
+        $scope.sudah_masuk = true;
     }
 
     $scope.init();
