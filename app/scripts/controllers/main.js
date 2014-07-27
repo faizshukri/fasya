@@ -119,7 +119,7 @@ angular.module('fasyaApp')
 
         $timeout(function(){
             $scope.masuk();
-        }, 7000);
+        }, 10000);
 
     }
 
