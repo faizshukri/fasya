@@ -33,7 +33,7 @@ $primary-color: #f07677;
             top: 25px;
 
             > span {
-                top: 260px;
+                top: 290px;
                 height: 50px;
             }
 
@@ -59,6 +59,22 @@ $primary-color: #f07677;
                 background-color: $primary-color;
                 border-color: $primary-color;
                 margin-right: 5px;
+            }
+        }
+
+        .carousel-inner {
+            .groupucapan > div {
+                font-size: 0.9em;
+                line-height: 1.7em;
+                height: 100%;
+
+                @media (min-width: 992px){
+                    height: 260px;
+                }
+
+                .css-emoticon {
+                    font-size: 1em;
+                }
             }
         }
     }

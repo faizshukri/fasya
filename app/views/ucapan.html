@@ -39,11 +39,11 @@
                             <div class="row">
                                 
                                 <!-- "GUEST BOOK" COMMENT -->
-                                <div ng-repeat="ucapan in groupucapan" class="col-md-4">
+                                <div ng-repeat="ucapan in groupucapan" class="col-md-4 groupucapan">
                                     <div>
                                         <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65">
                                         <h5>{{ ucapan.name }}<span>{{ getFormattedDate(ucapan.created) }}</span></h5>
-                                        <p>{{ ucapan.message }}</p>
+                                        <p ng-bind-html="getFormattedMessage(ucapan.message)"></p>
                                     </div>
                                 </div><!-- /.col-md-4 -->
 

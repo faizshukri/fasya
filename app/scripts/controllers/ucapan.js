@@ -25,6 +25,11 @@ angular.module('fasyaApp')
         return moment(date).fromNow();
     }
 
+    $scope.getFormattedMessage = function(str){
+        str = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
+        return str.replace(/(\<br \/\>){2}/g, '<br />');
+    }
+
     $scope.makeCollection = function(){
         var limitPerPage = 6;
         var ids = $scope.ucapans.$getIndex().reverse();
@@ -54,6 +59,7 @@ angular.module('fasyaApp')
 
             $timeout(function(){
                 $scope.ucapanInit = true;
+                angular.element('.groupucapan > div > p').emoticonize();
             });
         });
 

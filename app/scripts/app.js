@@ -11,6 +11,7 @@
 angular
   .module('fasyaApp', [
     'ngRoute',
+    'ngSanitize',
     'angular-loading-bar',
     'ngAnimate',
     'ui.gravatar',
