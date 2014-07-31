@@ -58,6 +58,7 @@ $primary-color: #f07677;
             > li.active {
                 background-color: $primary-color;
                 border-color: $primary-color;
+                margin-right: 5px;
             }
         }
     }

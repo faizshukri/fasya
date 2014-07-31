@@ -25,7 +25,7 @@
 
             <div class="csspinner duo" align="center" ng-hide="ucapanCollection"></div>
 
-            <div id="slide-ucapan" class="carousel slide" data-ride="carousel" ng-show="ucapanCollection" >
+            <div id="slide-ucapan" class="carousel slide" data-ride="carousel" ng-show="ucapanCollection" data-interval="false">
               <!-- Indicators -->
               <ol class="carousel-indicators">
                 <li ng-repeat="ucapan in ucapanCollection" data-target="#slide-ucapan" data-slide-to="{{$index}}" ng-class="{active: $first}"></li>
