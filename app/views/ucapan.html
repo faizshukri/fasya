@@ -41,7 +41,8 @@
                                 <!-- "GUEST BOOK" COMMENT -->
                                 <div ng-repeat="ucapan in groupucapan" class="col-md-4 groupucapan">
                                     <div>
-                                        <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65" gravatar-default="http://i.imgur.com/8E4aLVd.png">
+                                        <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65" gravatar-default="http://i.imgur.com/8E4aLVd.png" ng-if="ucapan.jantina=='lelaki'">
+                                        <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65" gravatar-default="http://i.imgur.com/F24vZDq.png" ng-if="ucapan.jantina=='perempuan'">
                                         <h5>{{ ucapan.name }}<span>{{ getFormattedDate(ucapan.created) }}</span></h5>
                                         <p ng-bind-html="getFormattedMessage(ucapan.message)"></p>
                                     </div>
@@ -86,6 +87,11 @@
                         </div>
                         <div class="form-group">
                             <textarea ng-model="newPerson.message" required id="guest-message" name="guest-message" placeholder="Mesej anda di sini..." rows="3" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            Avatar:&nbsp;&nbsp;
+                            <label style="font-weight: normal;"><input ng-model="newPerson.jantina" type="radio" name="jantina" value="lelaki">&nbsp;Lelaki&nbsp;&nbsp;</label>
+                            <label style="font-weight: normal;"><input ng-model="newPerson.jantina" type="radio" name="jantina" value="perempuan">&nbsp;Perempuan</label>
                         </div>
                         <div class="form-group" id='gb_submit_m'>
                             <input type="button" class="btn btn-primary" value="Hantar Mesej" ng-click="submit()" ng-disabled="ucapanForm.$invalid">

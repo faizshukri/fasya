@@ -47,7 +47,9 @@ angular.module('fasyaApp')
         $scope.ucapanInit = false;
         $scope.ucapanRef = new Firebase("https://fasya.firebaseio.com/ucapan");
         $scope.ucapans = $firebase($scope.ucapanRef);
-        $scope.newPerson = {};
+        $scope.newPerson = {
+            jantina: 'lelaki'
+        };
 
         $scope.ucapanRef.on('value', function(snapshot){
             $scope.makeCollection();
