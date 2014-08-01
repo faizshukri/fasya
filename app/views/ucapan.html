@@ -41,7 +41,7 @@
                                 <!-- "GUEST BOOK" COMMENT -->
                                 <div ng-repeat="ucapan in groupucapan" class="col-md-4 groupucapan">
                                     <div>
-                                        <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65">
+                                        <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65" gravatar-default="http://i.imgur.com/8E4aLVd.png">
                                         <h5>{{ ucapan.name }}<span>{{ getFormattedDate(ucapan.created) }}</span></h5>
                                         <p ng-bind-html="getFormattedMessage(ucapan.message)"></p>
                                     </div>
