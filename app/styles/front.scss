@@ -28,6 +28,15 @@
                 border-top-right-radius: 50%;
             }
         }
+
+        > img {
+            border: none;
+            padding: 0px;
+            @media (max-width: 767px){
+                width: 140%;
+                margin-left: -20%;
+            }
+        }
     }
 }
 
