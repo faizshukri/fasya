@@ -128,6 +128,12 @@ angular.module('fasyaApp')
         angular.element('#counter').fadeOut();
         $scope.music.togglePlay();
         $scope.sudah_masuk = true;
+
+        angular.element('body').on('touchstart', function(e){
+            angular.element('body').off('touchstart');
+            if($scope.music.isPlay) return;
+            $scope.music.togglePlay();
+        });
     }
 
     $scope.init();
