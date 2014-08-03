@@ -84,6 +84,15 @@ $primary-color: #f07677;
                 .css-emoticon {
                     font-size: 1em;
                 }
+
+                .ucapanText {
+                    @media(min-width: 992px){
+                        margin-top: 10px;
+                        height: 197px;
+                        width: 100%;
+                        overflow-y: auto;
+                    }
+                }
             }
         }
     }
