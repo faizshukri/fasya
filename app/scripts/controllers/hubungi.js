@@ -41,7 +41,7 @@ angular.module('fasyaApp')
             url: 'http://mail.fasya.com',
             data: { 
                 from: $scope.contact.name + ' <' + $scope.contact.email + '>',
-                to: 'Faiz Shukri <ukhwahfillah90@gmail.com>', 
+                to: 'Faiz Shukri <ukhwahfillah90@gmail.com>, Syafiyah Adzahar <penawar.hati90@gmail.com>', 
                 subject: subject, 
                 text: $scope.contact.message 
             },
