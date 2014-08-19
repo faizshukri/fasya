@@ -45,6 +45,7 @@
                                         <img gravatar-src="'{{ ucapan.email }}'" gravatar-size="65" gravatar-default="http://i.imgur.com/F24vZDq.png" ng-if="ucapan.jantina=='perempuan'">
                                         <h5>{{ ucapan.name }}<span>{{ getFormattedDate(ucapan.created) }}</span></h5>
                                         <p class="ucapanText" ng-bind-html="getFormattedMessage(ucapan.message)"></p>
+                                        <div ng-if="ucapan.replies" class="replyText label label-success"><a href="javascript:;" ng-click="openReply(ucapan.$id, ucapan.jantina)"><strong><span ng-bind="getObjectLength(ucapan.replies)"></span></strong> reply</a></div>
                                     </div>
                                 </div><!-- /.col-md-4 -->
 

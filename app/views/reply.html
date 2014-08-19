@@ -1,0 +1,18 @@
+<style type="text/css">
+    .ucapanModal .lastitem{
+        border-bottom: 1px solid pink !important;
+    }
+</style>
+
+<div class="ucapanModal">
+    <div ng-repeat="reply in replies" style="border: 1px solid pink; border-bottom: none;" ng-class="{'row':'row', 'lastitem': $last}">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="right">
+            <img gravatar-src="'{{ reply.email }}'" gravatar-size="65" gravatar-default="http://i.imgur.com/8E4aLVd.png" ng-if="jantina=='lelaki' && reply.email != 'penawar.hati90@gmail.com'" style="height: 64px; width: 64px;">
+            <img gravatar-src="'{{ reply.email }}'" gravatar-size="65" gravatar-default="http://i.imgur.com/F24vZDq.png" ng-if="jantina=='perempuan' || reply.email == 'penawar.hati90@gmail.com'" style="height: 64px; width: 64px;">
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <b>{{ reply.name }}</b> balas: <span class="label label-primary" ng-if="reply.email=='faizshukri90@gmail.com'">Groom</span><span class="label label-danger" ng-if="reply.email=='penawar.hati90@gmail.com'">Bride</span><br />
+            <span ng-bind-html="getFormattedMessage(reply.message)"></span>
+        </div>
+    </div>
+</div>

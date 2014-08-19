@@ -76,6 +76,7 @@ $primary-color: #f07677;
                 font-size: 0.9em;
                 line-height: 1.7em;
                 height: 100%;
+                position: relative;
 
                 @media (min-width: 992px){
                     height: 260px;
@@ -91,6 +92,19 @@ $primary-color: #f07677;
                         height: 197px;
                         width: 100%;
                         overflow-y: auto;
+                    }
+                }
+
+                .replyText {
+                    font-weight: normal;
+                    position: absolute; 
+                    top: 30px; 
+                    right: 0px; 
+                    font-size: 1.1em; 
+                    border-radius: 0px;
+                    a {
+                        color: white;
+                        text-decoration: none;
                     }
                 }
             }

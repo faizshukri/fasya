@@ -8,7 +8,9 @@
  * Controller of the fasyaApp
  */
 angular.module('fasyaApp')
-  .controller('UcapanCtrl', [ '$scope', '$firebase', '$timeout', function ($scope, $firebase, $timeout) {
+  .controller('UcapanCtrl', [ '$scope', '$firebase', '$timeout', '$modal', function ($scope, $firebase, $timeout, $modal) {
+    
+    $scope.ucapanUrl = 'https://fasya.firebaseio.com/ucapan';
     
     $scope.addUcapan = function(){
         $scope.ucapans.$add($scope.newPerson);
@@ -30,6 +32,10 @@ angular.module('fasyaApp')
         return str.replace(/(\<br \/\>){2}/g, '<br />');
     }
 
+    $scope.getObjectLength = function(obj){
+        return Object.keys(obj).length;
+    }
+
     $scope.makeCollection = function(){
         var limitPerPage = 6;
         var ids = $scope.ucapans.$getIndex().reverse();
@@ -42,10 +48,23 @@ angular.module('fasyaApp')
         });
     }
 
+    $scope.openReply = function(ucapanID, jantina){
+        $scope.currentReply = {
+            replies: $scope.ucapans[ucapanID].replies,
+            jantina: jantina
+        };
+        
+        var modal = $modal({
+            show: true,
+            template: "views/replies.html",
+            scope: $scope
+        });
+    }
+
 
     $scope.init = function(){
         $scope.ucapanInit = false;
-        $scope.ucapanRef = new Firebase("https://fasya.firebaseio.com/ucapan");
+        $scope.ucapanRef = new Firebase($scope.ucapanUrl);
         $scope.ucapans = $firebase($scope.ucapanRef);
         $scope.newPerson = {
             jantina: 'lelaki'
@@ -55,7 +74,6 @@ angular.module('fasyaApp')
             $scope.makeCollection();
 
             angular.element('#slide-ucapan').on('slid.bs.carousel', function () {
-                console.log('1');
                 if($scope.ucapanInit) window.scrollTo(0,400);
             });
 
@@ -69,6 +87,51 @@ angular.module('fasyaApp')
             if($scope.ucapanInit){
                 angular.element('#slide-ucapan').carousel(0);
                 window.scrollTo(0,400);
+
+                //Send email 1
+                $.ajax({
+                    url: 'http://mail.fasya.com',
+                    data: { 
+                        from: 'Reply To Add Comment <' + child.name().slice(1) + '@fasya.com>',
+                        to: child.val().name+' <'+child.val().email+'>',
+                        subject: "Terima kasih di atas ucapan anda di FaSya.com", 
+                        html: '<p>Terima kasih yang tidak terhingga diucapkan di atas ucapan anda di FaSya.com. </p>'+
+                            '<p>Ucapan dari anda:</p>'+
+                            '<blockquote style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex" '+
+                            'class="gmail_quote"><i>'+$scope.getFormattedMessage(child.val().message)+'</i></blockquote>'+
+                            '<p>Semoga dengan iringan do\'a daripada kalian membawa keberkatan dan keredhaan daripada Allah SWT. Semoga Allah mempermudah dan memperindahkan perjalanan kalian.</p>'+
+                            '<p>Mohon do\'akan agar baitul muslim yang bakal dibina sentiasa di dalam redhaNya, dipenuhi mawaddah dan rahmat Allah hingga dapat bersama-sama di syurgaNya. Allahumma amin.</p>'+
+                            '<p>&nbsp;</p>'+
+                            '<div>Setulus Ikhlas & penuh rasa kasih kerana Allah,<br />'+
+                            '<b>Ahmad Faiz Ahmad Shukri</b> & <b>Syafiyah Adzahar</b></div>'
+                    },
+                    type: 'POST',
+                    dataType: 'json'
+                });
+
+                //Send email 2
+                var admin = {
+                    'Faiz Shukri': 'faizshukri90@gmail.com',
+                    'Syafiyah Adzahar': 'penawar.hati90@gmail.com'
+                };
+
+                _.each(admin, function(admin_email, admin_name){
+                    $.ajax({
+                        url: 'http://mail.fasya.com',
+                        data: {
+                            from: 'Reply To Add Comment <' + child.name().slice(1) + '@fasya.com>',
+                            to: admin_name+' <'+admin_email+'>',
+                            subject: 'Ucapan oleh ' + child.val().name + ' di fasya.com', 
+                            html: '<p>Sila reply email ini untuk membalas ucapan berikut:</p>'+
+                                '<blockquote style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex" '+
+                                'class="gmail_quote"><i>'+child.val().created + ' <b>' + child.val().name+'</b> &lt;'+child.val().email+'&gt;:<br /><br />'+$scope.getFormattedMessage(child.val().message)+'</i></blockquote>'+
+                                '<p>&nbsp;</p>'+
+                                '<p><small><i>Email ini dijana dengan automatik oleh sistem balas ucapan FaSya.com</i></small></p>'
+                        },
+                        type: 'POST',
+                        dataType: 'json'
+                    });
+                });
             }
         });
     }
