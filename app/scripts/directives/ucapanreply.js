@@ -11,7 +11,8 @@ angular.module('fasyaApp')
     return {
       scope: {
         replies: '=',
-        jantina: '='
+        jantina: '=',
+        email: '='
       },
       transclude: true,
       templateUrl: 'views/reply.html',
