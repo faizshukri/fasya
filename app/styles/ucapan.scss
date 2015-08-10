@@ -3,15 +3,15 @@ $primary-color: #f07677;
 
 // Ucapan
 #ucapan {
-    .csspinner {
+    .whirl {
         margin: 50px 0px 70px;
         height: 20px;
     }
-    .csspinner:before {
+    .whirl:before {
         background-color: transparent;
     }
 
-    .csspinner.duo:after {
+    .whirl.duo:after {
         border-bottom: 4px solid $primary-color;
         border-top: 4px solid $primary-color;
         border-right: 4px solid transparent;

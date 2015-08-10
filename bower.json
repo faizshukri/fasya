@@ -11,8 +11,8 @@
     "angularfire": "~0.7.1",
     "moment": "~2.7.0",
     "underscore": "~1.6.0",
-    "csspinner": "~1.0.1",
-    "angular-strap": "~2.0.3",
+    "whirl": "~1.0.0",
+    "angular-strap": "2.0.3",
     "jquery": "~1.11.1",
     "angular-sanitize": "~1.2.21"
   },
