@@ -10,7 +10,7 @@
 angular.module('fasyaApp')
   .controller('UcapanCtrl', [ '$scope', '$firebase', '$timeout', '$modal', function ($scope, $firebase, $timeout, $modal) {
     
-    $scope.ucapanUrl = 'https://fasya.firebaseio.com/ucapan';
+    $scope.ucapanUrl = 'https://fasya-demo.firebaseio.com/ucapan';
     
     $scope.addUcapan = function(){
         $scope.ucapans.$add($scope.newPerson);
